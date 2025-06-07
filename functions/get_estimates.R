@@ -87,4 +87,3 @@ get_estimates <- function(psi_a, psi_b) {
     se_IF = se_IF
   ))
 }
- h
