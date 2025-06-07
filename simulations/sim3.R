@@ -10,7 +10,7 @@ invisible(lapply(packages, library, character.only = TRUE))
 
 
 # ===========================================================
-# SIMULATION SCRIPT 3: Inferrnce over repeated samples in Double ML 
+# SIMULATION SCRIPT 3: Inference over repeated samples in Double ML 
 # -----------------------------------------------------------
 # Repeatedly draws samples from dgp, runs cross-fitting and estimation
 # with multiple learners, collects psi for PLR and AIPW, and saves results.
