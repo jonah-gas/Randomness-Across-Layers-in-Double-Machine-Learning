@@ -31,7 +31,7 @@ plot_theta_by_dgp <- function(df_long, dgp_label, theta_true) {
   ggplot(df_long[dgp == dgp_label], aes(x = method_plot, y = theta_value, fill = theta_type)) +
     geom_boxplot(position = position_dodge(width = 0.75), alpha = 0.85, outlier.shape = NA) +
     geom_hline(yintercept = theta_true, linetype = "dashed", color = "red") +
-    scale_fill_viridis_d(name = "Aggregation") +
+    scale_fill_viridis_d(name = "Aggregation:") +
     coord_cartesian(ylim = c(0, 2)) +
     labs(
       title = paste("DGP", substr(dgp_label, 5, 5)), 
@@ -49,7 +49,8 @@ plot_theta_by_dgp <- function(df_long, dgp_label, theta_true) {
       axis.title.x = element_text(margin = margin(r = 10)),
       legend.title = element_text(size = 12),
       legend.text = element_text(size = 10), 
-      panel.spacing = unit(1.25, "lines")
+      panel.spacing = unit(1.25, "lines"),
+      strip.text = element_text(12)
     )
 }
 
@@ -123,7 +124,7 @@ plot_all_mse_faceted <- function(df, dgp_label = NULL, ncol = 3) {
     df_mse,
     id.vars = c("learner", "method", "aggregation"),
     measure.vars = c("bias2", "var"),  
-    variable.name = "Component",
+    variable.name = "Component:",
     value.name = "MSE"
   )
   
