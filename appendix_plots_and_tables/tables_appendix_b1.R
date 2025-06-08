@@ -15,7 +15,7 @@ invisible(lapply(packages, library, character.only = TRUE))
 source("functions/get_estimates.R")
 
 # specify input file and load results
-selected_dgp <- "DGP1_1"
+selected_dgp <- "DGP_1"
 # selected_dgp <- "DGP_2"
 input_file <- paste0("results/sim2_results_", selected_dgp, ".rds")
 results_sim2 <- readRDS(input_file)
