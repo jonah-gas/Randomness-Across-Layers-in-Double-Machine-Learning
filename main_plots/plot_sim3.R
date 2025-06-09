@@ -44,9 +44,9 @@ plot_theta_by_dgp <- function(df_long, dgp_label, theta_true) {
     theme(
       plot.title = element_text(size = 13, hjust = 0.5, face = "bold"),
       axis.title = element_text(size = 12),
-      axis.title.y = element_text(margin = margin(r = 10)),
+      axis.title.y = element_text(size = 12),
       axis.text = element_text(size = 10),
-      axis.title.x = element_text(margin = margin(r = 10)),
+      axis.title.x = element_text(size = 12),
       legend.title = element_text(size = 12),
       legend.text = element_text(size = 10), 
       panel.spacing = unit(1.25, "lines"),
